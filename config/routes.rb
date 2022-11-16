@@ -1,3 +1,5 @@
 Rails.application.routes.draw do
-  root to: "home#index"
+  resources :shots
+  devise_for :users, controllers: { registrations: "registrations" }
+  root to: "shots#index"
 end
